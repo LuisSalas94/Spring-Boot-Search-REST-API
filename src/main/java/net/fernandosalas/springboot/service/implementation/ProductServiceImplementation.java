@@ -19,4 +19,8 @@ public class ProductServiceImplementation implements ProductService {
        List<Product> productList = productRepository.searchProducts(query);
        return productList;
     }
+    @Override
+    public Product createProduct(Product product) {
+        return productRepository.save(product);
+    }
 }
